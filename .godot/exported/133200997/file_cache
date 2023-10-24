@@ -1,0 +1,9 @@
+res://Enemies/Slime.tscn::c000cd350f6f36a222a4d864d5001336::1698033800::res://.godot/exported/133200997/export-e8f755be373aebcaf3a474a783ea288d-Slime.scn
+res://hboxes/hitbox.tscn::037494bc0341b3cf37cc85fa4a677ee8::1697944137::res://.godot/exported/133200997/export-355ffda0e879a8610a516132d39240f4-hitbox.scn
+res://hboxes/hurtbox.tscn::e810d878f6befc5cbb91ebc3c9fc173a::1697944137::res://.godot/exported/133200997/export-82339698c9a81e13f6b8743c5722b601-hurtbox.scn
+res://bush.tscn::505f08fbb3da0e0a366905b9b7d892ac::1697876209::res://.godot/exported/133200997/export-4d9e4c0957112773ef801d30ea21ff1f-bush.scn
+res://grass.tscn::25aba0123360414aaf8c6a440b039253::1698033801::res://.godot/exported/133200997/export-a34f8db25240a16f5c3e891255cf5006-grass.scn
+res://player.tscn::6cd27dee06df77a910f82d533e4ffd1b::1698033946::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
+res://tree.tscn::d296dae022cb6e2e13e816a9161ce006::1697876395::res://.godot/exported/133200997/export-ef7561903f4b6d6060f0c1dea57ad9fe-tree.scn
+res://world.tscn::30148ad40c8fe7d55922a4c681aec25c::1698033801::res://.godot/exported/133200997/export-76e0adcbc83681695885bae615f516ae-world.scn
+res://Enemies/stats.tscn::5405cf3eeaeed2495c8f16f09b24bed3::1698033801::res://.godot/exported/133200997/export-bba7411b2d4324217f897cc17937d07f-stats.scn

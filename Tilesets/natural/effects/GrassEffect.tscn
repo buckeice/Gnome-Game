@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxfaorqxqapfw"]
+
+[ext_resource type="Script" path="res://Tilesets/natural/effects/GrassEffect.gd" id="1_bmu36"]
+[ext_resource type="Texture2D" uid="uid://cd5j6s3lqndg5" path="res://Tilesets/natural/single images/tallGrass-sheet.png" id="1_ebojw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrr5v"]
+atlas = ExtResource("1_ebojw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agtvd"]
+atlas = ExtResource("1_ebojw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b46ut"]
+atlas = ExtResource("1_ebojw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb2w5"]
+atlas = ExtResource("1_ebojw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3v2q"]
+atlas = ExtResource("1_ebojw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdj0m"]
+atlas = ExtResource("1_ebojw")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e3e0d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrr5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agtvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b46ut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb2w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3v2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdj0m")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="GrassEffect" type="Node2D"]
+script = ExtResource("1_bmu36")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_e3e0d")
+autoplay = "default"
+frame_progress = 0.235081
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

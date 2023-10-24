@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://xybr7ltbea4u"]
+
+[ext_resource type="Script" path="res://grass.gd" id="1_xsvmr"]
+[ext_resource type="Texture2D" uid="uid://b1uogurc575id" path="res://Tilesets/natural/single images/tallGrass.png" id="2_ia58o"]
+[ext_resource type="PackedScene" uid="uid://bgcc15iqoqqqk" path="res://hboxes/hurtbox.tscn" id="3_wqw3k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tituj"]
+radius = 3.0
+height = 18.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecu20"]
+size = Vector2(20, 21.5)
+
+[node name="StaticBody2D10" type="StaticBody2D"]
+y_sort_enabled = true
+collision_layer = 33
+script = ExtResource("1_xsvmr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.01948e-28, -8)
+texture = ExtResource("2_ia58o")
+region_rect = Rect2(97, 390, 24, 21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_tituj")
+
+[node name="Hurtbox" parent="." instance=ExtResource("3_wqw3k")]
+collision_layer = 8
+collision_mask = 16
+show_hit = 2
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(1, -9.25)
+shape = SubResource("RectangleShape2D_ecu20")
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+
+[editable path="Hurtbox"]

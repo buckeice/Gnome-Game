@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://bydap32bs4pmt"]
+
+[ext_resource type="Script" path="res://Enemies/Effects/SlimeDeathEffect.gd" id="1_28yl2"]
+[ext_resource type="Texture2D" uid="uid://xtydmmoumoqf" path="res://Spritesheets/Slime.png" id="2_bravx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcx6a"]
+atlas = ExtResource("2_bravx")
+region = Rect2(2048, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arp8k"]
+atlas = ExtResource("2_bravx")
+region = Rect2(2112, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8l6bb"]
+atlas = ExtResource("2_bravx")
+region = Rect2(2176, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1g54k"]
+atlas = ExtResource("2_bravx")
+region = Rect2(2240, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1veyp"]
+atlas = ExtResource("2_bravx")
+region = Rect2(2304, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjm1w"]
+atlas = ExtResource("2_bravx")
+region = Rect2(2368, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_au1mk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcx6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arp8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8l6bb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g54k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1veyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjm1w")
+}],
+"loop": false,
+"name": &"Slime Death",
+"speed": 10.0
+}]
+
+[node name="SlimeDeathEffect" type="Node2D"]
+script = ExtResource("1_28yl2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_au1mk")
+animation = &"Slime Death"
+autoplay = "Slime Death"
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

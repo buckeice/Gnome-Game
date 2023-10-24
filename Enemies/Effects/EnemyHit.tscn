@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://b66g46dy4jmgi"]
+
+[ext_resource type="Script" path="res://Enemies/Effects/EnemyHit.gd" id="1_g1jsu"]
+[ext_resource type="Texture2D" uid="uid://bxnkfcvpf0f3u" path="res://Enemies/Effects/EnemyHit.png" id="2_sb7mt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_007jc"]
+atlas = ExtResource("2_sb7mt")
+region = Rect2(0, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny2q3"]
+atlas = ExtResource("2_sb7mt")
+region = Rect2(34, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wfnf"]
+atlas = ExtResource("2_sb7mt")
+region = Rect2(68, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axd08"]
+atlas = ExtResource("2_sb7mt")
+region = Rect2(102, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rydoy"]
+atlas = ExtResource("2_sb7mt")
+region = Rect2(136, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayjqj"]
+atlas = ExtResource("2_sb7mt")
+region = Rect2(170, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gayg3"]
+atlas = ExtResource("2_sb7mt")
+region = Rect2(204, 0, 34, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cbynq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_007jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny2q3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wfnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axd08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rydoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayjqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gayg3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="EnemyHit" type="Node2D"]
+script = ExtResource("1_g1jsu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cbynq")
+autoplay = "default"
+frame = 4
+frame_progress = 0.950026
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1lwsb72us5qq"
+path="res://.godot/imported/10-20-23 Recollections 2.mp3-13f06b084f4e8c182a8985e60823e62f.mp3str"
+
+[deps]
+
+source_file="res://audio/10-20-23 Recollections 2.mp3"
+dest_files=["res://.godot/imported/10-20-23 Recollections 2.mp3-13f06b084f4e8c182a8985e60823e62f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
