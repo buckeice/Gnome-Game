@@ -7,3 +7,4 @@ res://grass.tscn
 res://Enemies/PlayerDetectionZone.tscn
 res://Worlds/test_level.tscn
 res://Player.gd
+res://Enemies/Slime.gd

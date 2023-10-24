@@ -10,10 +10,13 @@ var knockBackSpeed = 50
 @export var FRICTION = 0.5
 @export var ACCELERATION = 300
 
+var player_first_seen = true
+
 
 enum {
 	IDLE,
 	WANDER,
+	ALERT,
 	CHASE
 }
 
@@ -37,6 +40,9 @@ func _physics_process(delta):
 	match state:
 		WANDER:
 			pass
+	match state:
+		ALERT:
+			animationPlayer.play("Alert")
 		
 	match state:
 		CHASE:
@@ -56,7 +62,14 @@ func _physics_process(delta):
 
 func seek_player():
 	if playerDetectionZone.can_see_player():
-		state = CHASE
+		if player_first_seen == true:
+			player_first_seen = false
+			state = ALERT
+		else:
+			state = CHASE
+
+func end_alert():
+	state = CHASE
 
 func _on_hurtbox_area_entered(area):
 	stats.health -= area.damage
