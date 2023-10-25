@@ -1,7 +1,8 @@
-[gd_scene load_steps=46 format=3 uid="uid://co1qjsojgv5c0"]
+[gd_scene load_steps=48 format=3 uid="uid://co1qjsojgv5c0"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_44f2r"]
 [ext_resource type="Texture2D" uid="uid://cxla5mksiync6" path="res://spritesheet.png" id="2_dx2b6"]
+[ext_resource type="PackedScene" uid="uid://bgcc15iqoqqqk" path="res://hboxes/hurtbox.tscn" id="3_ellng"]
 [ext_resource type="PackedScene" uid="uid://cc8tkykwq1d83" path="res://hboxes/hitbox.tscn" id="3_hqmg4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oslqa"]
@@ -255,7 +256,6 @@ tracks/4/keys = {
 [sub_resource type="Animation" id="Animation_bbj4m"]
 resource_name = "DodgeDown"
 length = 0.5
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -701,6 +701,10 @@ states/Start/position = Vector2(69, 118)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_fpby5")]
 graph_offset = Vector2(0, 84.4678)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p6qfc"]
+radius = 5.0
+height = 10.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t4qbw"]
 
 [node name="Player" type="CharacterBody2D"]
@@ -732,6 +736,13 @@ parameters/Dodge/blend_position = Vector2(0, 1)
 parameters/Idle/blend_position = Vector2(0, 1)
 parameters/Run/blend_position = Vector2(0, 1)
 
+[node name="Hurtbox" parent="." instance=ExtResource("3_ellng")]
+collision_layer = 4
+collision_mask = 32
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+shape = SubResource("CapsuleShape2D_p6qfc")
+
 [node name="HitboxPivot" type="Marker2D" parent="."]
 position = Vector2(0, -7)
 gizmo_extents = 27.0
@@ -745,4 +756,14 @@ collision_mask = 8
 shape = SubResource("CapsuleShape2D_t4qbw")
 disabled = true
 
+[node name="HealthLabel" type="Label" parent="."]
+offset_left = 20.0
+offset_top = -41.0
+offset_right = 60.0
+offset_bottom = -15.0
+text = "4"
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+
+[editable path="Hurtbox"]
 [editable path="HitboxPivot/SwordHitbox"]

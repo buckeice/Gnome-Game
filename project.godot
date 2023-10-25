@@ -15,6 +15,10 @@ run/main_scene="res://world.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerStats="*res://PlayerStats.tscn"
+
 [display]
 
 window/size/viewport_width=320
@@ -63,7 +67,8 @@ dodge={
 2d_physics/layer_3="PlayerHurtBox"
 2d_physics/layer_4="EnemyHurtBox"
 2d_physics/layer_5="PlayerHitBox"
-2d_physics/layer_6="Enemy"
+2d_physics/layer_6="EnemyHitBox"
+2d_physics/layer_7="PlayerProjectileHitBox"
 
 [rendering]
 

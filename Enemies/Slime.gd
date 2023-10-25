@@ -22,6 +22,9 @@ enum {
 
 var state = IDLE
 
+func _ready():
+	$HealthLabel.text = str(stats.health)
+
 func create_death_effect():
 	var DeathEffect = load("res://Enemies/Effects/SlimeDeathEffect.tscn")
 	var deathInstance = DeathEffect.instantiate()
@@ -73,6 +76,7 @@ func end_alert():
 
 func _on_hurtbox_area_entered(area):
 	stats.health -= area.damage
+	$HealthLabel.text = str(stats.health)
 	var direction = (position - area.owner.position).normalized()
 	velocity = direction * knockBackSpeed
 	

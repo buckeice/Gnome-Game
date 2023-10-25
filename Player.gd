@@ -6,6 +6,8 @@ extends CharacterBody2D
 var roll_vector = Vector2.DOWN
 const roll_speed = 150
 
+var stats = PlayerStats
+
 
 enum {
 	MOVE,
@@ -14,9 +16,16 @@ enum {
 }
 var state = MOVE
 
+
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
+@onready var hurtBox = $Hurtbox
+
+func _ready():
+	self.stats.connect("no_health", queue_free)
+	$HealthLabel.text = str(stats.health)
+
 
 func get_input():
 	var input = Vector2()
@@ -86,3 +95,10 @@ func roll_animation_finished():
 
 func attack_animation_finished():
 	state = MOVE
+
+
+func _on_hurtbox_area_entered(area):
+	stats.health -= 1
+	$HealthLabel.text = str(stats.health)
+	hurtBox.start_invincibility(1)
+	

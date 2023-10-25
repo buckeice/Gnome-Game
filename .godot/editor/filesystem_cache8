@@ -1,23 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698205999
+::res://::1698218833
 bush.tscn::PackedScene::8681751506299823065::1697876209::0::1::::<><>::uid://dh5ybed5w3ebs
 export_presets.cfg::TextFile::-1::1698034088::0::1::::<><>::
 grass.gd::GDScript::-1::1698040302::0::1::::<>StaticBody2D<>::
-grass.tscn::PackedScene::1663981243866149950::1698203719::0::1::::<><>::res://grass.gd<>uid://b1uogurc575id::::res://Tilesets/natural/single images/tallGrass.png<>uid://bgcc15iqoqqqk::::res://hboxes/hurtbox.tscn
+grass.tscn::PackedScene::1663981243866149950::1698214488::0::1::::<><>::res://grass.gd<>uid://b1uogurc575id::::res://Tilesets/natural/single images/tallGrass.png<>uid://bgcc15iqoqqqk::::res://hboxes/hurtbox.tscn
 icon.svg::CompressedTexture2D::4054566375382275539::1697860540::1697860553::1::::<><>::
-Player.gd::GDScript::-1::1698108140::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::5810147511418978557::1698203719::0::1::::<><>::res://Player.gd<>uid://cxla5mksiync6::::res://spritesheet.png<>uid://cc8tkykwq1d83::::res://hboxes/hitbox.tscn
+Player.gd::GDScript::-1::1698212010::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::5810147511418978557::1698214488::0::1::::<><>::res://Player.gd<>uid://cxla5mksiync6::::res://spritesheet.png<>uid://bgcc15iqoqqqk::::res://hboxes/hurtbox.tscn<>uid://cc8tkykwq1d83::::res://hboxes/hitbox.tscn
+PlayerStats.tscn::PackedScene::5231659476906063325::1698214488::0::1::::<><>::res://Enemies/stats.gd
 spritesheet.png::CompressedTexture2D::6409947146730483991::1698203684::1698203698::1::::<><>::
 tree.tscn::PackedScene::5590647305843075946::1697876395::0::1::::<><>::uid://bkkf6f33k73h1
-world.tscn::PackedScene::7071455794170240279::1698203718::0::1::::<><>::uid://dvxrgc2b2b1kf::::res://bush.tscn<>uid://nt7dr77yt8s5::::res://Tilesets/natural/TX Tileset Grass.png<>uid://clwfe53qu1gjq::::res://tree.tscn<>uid://xybr7ltbea4u::::res://grass.tscn<>uid://co1qjsojgv5c0::::res://player.tscn<>uid://cdl0magknneqw::::res://Tilesets/natural/TX Struct.png<>uid://d1lwsb72us5qq::::res://audio/10-20-23 Recollections 2.mp3<>uid://h1l0yao8nbnx::::res://Enemies/Slime.tscn
+world.tscn::PackedScene::7071455794170240279::1698214488::0::1::::<><>::uid://dvxrgc2b2b1kf::::res://bush.tscn<>uid://nt7dr77yt8s5::::res://Tilesets/natural/TX Tileset Grass.png<>uid://clwfe53qu1gjq::::res://tree.tscn<>uid://xybr7ltbea4u::::res://grass.tscn<>uid://co1qjsojgv5c0::::res://player.tscn<>uid://cdl0magknneqw::::res://Tilesets/natural/TX Struct.png<>uid://d1lwsb72us5qq::::res://audio/10-20-23 Recollections 2.mp3<>uid://h1l0yao8nbnx::::res://Enemies/Slime.tscn
 ::res://audio/::1697878859
 10-20-23 Recollections 2.mp3::AudioStreamMP3::9008248162305270360::1697786616::1697878859::1::::<><>::
-::res://Enemies/::1698203719
+::res://Enemies/::1698214488
 PlayerDetectionZone.gd::GDScript::-1::1698051473::0::1::::<>Area2D<>::
-PlayerDetectionZone.tscn::PackedScene::5385884248287463283::1698203719::0::1::::<><>::res://Enemies/PlayerDetectionZone.gd
+PlayerDetectionZone.tscn::PackedScene::5385884248287463283::1698214488::0::1::::<><>::res://Enemies/PlayerDetectionZone.gd
 Slime.gd::GDScript::-1::1698108714::0::1::::<>CharacterBody2D<>::
-Slime.tscn::PackedScene::545709520080945421::1698203718::0::1::::<><>::res://Enemies/Slime.gd<>uid://xtydmmoumoqf::::res://Spritesheets/Slime.png<>uid://ciy7yybq81x1d::::res://Enemies/PlayerDetectionZone.tscn<>uid://dbyu0limsp0ro::::res://Spritesheets/Shadows/SlimeShadow.png<>uid://dhbpixstclenc::::res://Enemies/stats.tscn<>uid://bgcc15iqoqqqk::::res://hboxes/hurtbox.tscn
-stats.gd::GDScript::-1::1698033800::0::1::::<>Node<>::
+Slime.tscn::PackedScene::545709520080945421::1698214488::0::1::::<><>::res://Enemies/Slime.gd<>uid://xtydmmoumoqf::::res://Spritesheets/Slime.png<>uid://ciy7yybq81x1d::::res://Enemies/PlayerDetectionZone.tscn<>uid://dbyu0limsp0ro::::res://Spritesheets/Shadows/SlimeShadow.png<>uid://dhbpixstclenc::::res://Enemies/stats.tscn<>uid://bgcc15iqoqqqk::::res://hboxes/hurtbox.tscn<>uid://cc8tkykwq1d83::::res://hboxes/hitbox.tscn
+stats.gd::GDScript::-1::1698206153::0::1::::<>Node<>::
 stats.tscn::PackedScene::7653574612252241700::1698040460::0::1::::<><>::res://Enemies/stats.gd
 ::res://Enemies/Effects/::1698040460
 EnemyHit.gd::GDScript::-1::1698040166::0::1::::<>Node2D<>::
@@ -26,11 +27,11 @@ EnemyHit.tscn::PackedScene::4626688270815638236::1698040460::0::1::::<><>::res:/
 SlimeDeathEffect.gd::GDScript::-1::1698039117::0::1::::<>Node2D<>::
 SlimeDeathEffect.tscn::PackedScene::4077174363610801359::1698040460::0::1::::<><>::res://Enemies/Effects/SlimeDeathEffect.gd<>uid://xtydmmoumoqf
 ::res://GAMETEST/::1698034085
-::res://hboxes/::1698203719
-hitbox.gd::GDScript::-1::1698034208::0::1::::<>Area2D<>::
-hitbox.tscn::PackedScene::4982516278378286106::1698203718::0::1::::<><>::res://hboxes/hitbox.gd
-hurtbox.gd::GDScript::-1::1698041912::0::1::::<>Area2D<>::
-hurtbox.tscn::PackedScene::2811851954461738186::1698203719::0::1::::<><>::res://hboxes/hurtbox.gd
+::res://hboxes/::1698214496
+hitbox.gd::GDScript::-1::1698212247::0::1::::<>Area2D<>::
+hitbox.tscn::PackedScene::4982516278378286106::1698214488::0::1::::<><>::res://hboxes/hitbox.gd
+hurtbox.gd::GDScript::-1::1698214496::0::1::::<>Area2D<>::
+hurtbox.tscn::PackedScene::2811851954461738186::1698214496::0::1::::<><>::res://hboxes/hurtbox.gd
 ::res://Spritesheets/::1698026925
 Slime.png::CompressedTexture2D::1655029795691156157::1697958395::1697958475::1::::<><>::
 ::res://Spritesheets/Shadows/::1698026930
@@ -54,5 +55,5 @@ bush.png::CompressedTexture2D::7713974498909004292::1697870644::1697870646::1:::
 tallGrass-sheet.png::CompressedTexture2D::5045942032664554430::1698035417::1698035419::1::::<><>::
 tallGrass.png::CompressedTexture2D::4253480002886229995::1698034987::1698035419::1::::<><>::
 tree 1.png::CompressedTexture2D::3109312149347026712::1697870559::1697870564::1::::<><>::
-::res://Worlds/::1698203719
-test_level.tscn::PackedScene::74102688549044592::1698203719::0::1::::<><>::uid://co1qjsojgv5c0::::res://player.tscn<>uid://h1l0yao8nbnx::::res://Enemies/Slime.tscn
+::res://Worlds/::1698214488
+test_level.tscn::PackedScene::74102688549044592::1698214488::0::1::::<><>::uid://co1qjsojgv5c0::::res://player.tscn<>uid://h1l0yao8nbnx::::res://Enemies/Slime.tscn

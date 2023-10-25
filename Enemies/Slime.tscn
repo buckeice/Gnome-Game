@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://h1l0yao8nbnx"]
+[gd_scene load_steps=19 format=3 uid="uid://h1l0yao8nbnx"]
 
 [ext_resource type="Script" path="res://Enemies/Slime.gd" id="1_4w6m5"]
 [ext_resource type="Texture2D" uid="uid://xtydmmoumoqf" path="res://Spritesheets/Slime.png" id="1_l7evy"]
@@ -6,13 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://dbyu0limsp0ro" path="res://Spritesheets/Shadows/SlimeShadow.png" id="2_i6rqm"]
 [ext_resource type="PackedScene" uid="uid://dhbpixstclenc" path="res://Enemies/stats.tscn" id="2_v6ec8"]
 [ext_resource type="PackedScene" uid="uid://bgcc15iqoqqqk" path="res://hboxes/hurtbox.tscn" id="4_ke0ke"]
+[ext_resource type="PackedScene" uid="uid://cc8tkykwq1d83" path="res://hboxes/hitbox.tscn" id="6_xmm4r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_umge1"]
 radius = 81.2219
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oijvy"]
-radius = 6.0
-height = 36.0
+radius = 4.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5criv"]
+radius = 8.0
+height = 34.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_poxsu"]
 radius = 13.0
@@ -155,7 +159,7 @@ shape = SubResource("CircleShape2D_umge1")
 maxHealth = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(0, 5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_oijvy")
 
@@ -169,6 +173,15 @@ texture_filter = 1
 position = Vector2(0, -2)
 texture = ExtResource("1_l7evy")
 hframes = 39
+
+[node name="Hitbox" parent="." instance=ExtResource("6_xmm4r")]
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, 2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5criv")
 
 [node name="Hurtbox" parent="." instance=ExtResource("4_ke0ke")]
 collision_layer = 8
@@ -184,8 +197,15 @@ libraries = {
 "": SubResource("AnimationLibrary_0l5ms")
 }
 
+[node name="HealthLabel" type="Label" parent="."]
+offset_left = -5.0
+offset_top = -41.0
+offset_right = 35.0
+offset_bottom = -15.0
+
 [connection signal="no_health" from="Stats" to="." method="_on_stats_no_health"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 
 [editable path="PlayerDetectionZone"]
+[editable path="Hitbox"]
 [editable path="Hurtbox"]
