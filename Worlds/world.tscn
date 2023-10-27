@@ -1,16 +1,16 @@
 [gd_scene load_steps=14 format=3 uid="uid://c70p3xn3cht6v"]
 
-[ext_resource type="PackedScene" uid="uid://dvxrgc2b2b1kf" path="res://bush.tscn" id="2_lqsss"]
-[ext_resource type="Texture2D" uid="uid://nt7dr77yt8s5" path="res://Tilesets/natural/TX Tileset Grass.png" id="3_mhswo"]
-[ext_resource type="PackedScene" uid="uid://clwfe53qu1gjq" path="res://tree.tscn" id="3_y8h0i"]
-[ext_resource type="PackedScene" uid="uid://xybr7ltbea4u" path="res://grass.tscn" id="4_3vhqe"]
-[ext_resource type="PackedScene" uid="uid://co1qjsojgv5c0" path="res://player.tscn" id="4_yv403"]
-[ext_resource type="Texture2D" uid="uid://cdl0magknneqw" path="res://Tilesets/natural/TX Struct.png" id="5_ongj5"]
-[ext_resource type="AudioStream" uid="uid://d1lwsb72us5qq" path="res://audio/10-20-23 Recollections 2.mp3" id="5_ykwob"]
-[ext_resource type="PackedScene" uid="uid://h1l0yao8nbnx" path="res://Enemies/Slime.tscn" id="8_8kbf5"]
+[ext_resource type="PackedScene" uid="uid://co1qjsojgv5c0" path="res://player.tscn" id="1_bmohf"]
+[ext_resource type="PackedScene" uid="uid://dvxrgc2b2b1kf" path="res://bush.tscn" id="2_n7mb1"]
+[ext_resource type="PackedScene" uid="uid://clwfe53qu1gjq" path="res://tree.tscn" id="3_pd7r1"]
+[ext_resource type="Texture2D" uid="uid://nt7dr77yt8s5" path="res://Tilesets/natural/TX Tileset Grass.png" id="4_3jpju"]
+[ext_resource type="Texture2D" uid="uid://cdl0magknneqw" path="res://Tilesets/natural/TX Struct.png" id="5_rxkpl"]
+[ext_resource type="AudioStream" uid="uid://d1lwsb72us5qq" path="res://audio/10-20-23 Recollections 2.mp3" id="6_d2esk"]
+[ext_resource type="PackedScene" uid="uid://xybr7ltbea4u" path="res://grass.tscn" id="7_40ijm"]
+[ext_resource type="PackedScene" uid="uid://h1l0yao8nbnx" path="res://Enemies/Slime.tscn" id="8_3roem"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vgq28"]
-texture = ExtResource("3_mhswo")
+texture = ExtResource("4_3jpju")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -269,7 +269,7 @@ texture = ExtResource("3_mhswo")
 15:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7t0bf"]
-texture = ExtResource("5_ongj5")
+texture = ExtResource("5_rxkpl")
 25:1/0 = 0
 26:1/0 = 0
 27:1/0 = 0
@@ -499,37 +499,37 @@ adjustment_enabled = true
 [node name="World" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("4_yv403")]
+[node name="Player" parent="." instance=ExtResource("1_bmohf")]
 position = Vector2(302, 96)
 
 [node name="Node" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="StaticBody2D" parent="Node" instance=ExtResource("2_lqsss")]
+[node name="StaticBody2D" parent="Node" instance=ExtResource("2_n7mb1")]
 position = Vector2(98, 51)
 
-[node name="StaticBody2D2" parent="Node" instance=ExtResource("2_lqsss")]
+[node name="StaticBody2D2" parent="Node" instance=ExtResource("2_n7mb1")]
 position = Vector2(233, 116)
 
-[node name="StaticBody2D3" parent="Node" instance=ExtResource("3_y8h0i")]
+[node name="StaticBody2D3" parent="Node" instance=ExtResource("3_pd7r1")]
 position = Vector2(269, 75)
 
-[node name="StaticBody2D4" parent="Node" instance=ExtResource("3_y8h0i")]
+[node name="StaticBody2D4" parent="Node" instance=ExtResource("3_pd7r1")]
 position = Vector2(45, 203)
 
-[node name="StaticBody2D5" parent="Node" instance=ExtResource("2_lqsss")]
+[node name="StaticBody2D5" parent="Node" instance=ExtResource("2_n7mb1")]
 position = Vector2(104, 156)
 
-[node name="StaticBody2D6" parent="Node" instance=ExtResource("2_lqsss")]
+[node name="StaticBody2D6" parent="Node" instance=ExtResource("2_n7mb1")]
 position = Vector2(202, 140)
 
-[node name="StaticBody2D7" parent="Node" instance=ExtResource("2_lqsss")]
+[node name="StaticBody2D7" parent="Node" instance=ExtResource("2_n7mb1")]
 position = Vector2(204, 48)
 
-[node name="StaticBody2D8" parent="Node" instance=ExtResource("2_lqsss")]
+[node name="StaticBody2D8" parent="Node" instance=ExtResource("2_n7mb1")]
 position = Vector2(225, 130)
 
-[node name="StaticBody2D9" parent="Node" instance=ExtResource("2_lqsss")]
+[node name="StaticBody2D9" parent="Node" instance=ExtResource("2_n7mb1")]
 position = Vector2(241, 143)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -570,20 +570,21 @@ position = Vector2(326, 110)
 shape = SubResource("RectangleShape2D_l18ij")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_ykwob")
+stream = ExtResource("6_d2esk")
 volume_db = -19.08
+autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vfy1q")
 
-[node name="StaticBody2D10" parent="." instance=ExtResource("4_3vhqe")]
+[node name="StaticBody2D10" parent="." instance=ExtResource("7_40ijm")]
 position = Vector2(24, 45)
 
-[node name="StaticBody2D11" parent="." instance=ExtResource("4_3vhqe")]
+[node name="StaticBody2D11" parent="." instance=ExtResource("7_40ijm")]
 position = Vector2(43, 69)
 
-[node name="StaticBody2D12" parent="." instance=ExtResource("4_3vhqe")]
+[node name="StaticBody2D12" parent="." instance=ExtResource("7_40ijm")]
 position = Vector2(113, 120)
 
-[node name="Node2D" parent="." instance=ExtResource("8_8kbf5")]
+[node name="Node2D" parent="." instance=ExtResource("8_3roem")]
 position = Vector2(152, 91)

@@ -1,11 +1,10 @@
+res://player.tscn
 res://world.tscn
 res://Enemies/Slime.tscn
 res://hboxes/hitbox.tscn
 res://hboxes/hurtbox.tscn
-res://player.tscn
 res://grass.tscn
 res://Enemies/PlayerDetectionZone.tscn
 res://Worlds/test_level.tscn
 res://PlayerStats.tscn
-res://Player.gd
-res://Enemies/Slime.gd
+res://Worlds/world.tscn
